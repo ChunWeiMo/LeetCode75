@@ -17,6 +17,11 @@ def kidsWithCandies(candies: list[int], extraCandies: int) -> list[bool]:
     return result
 
 
+def kidsWithCandies_comprehension(candies: list[int], extraCandies: int) -> list[bool]:
+    M = max(candies)
+    return [candy + extraCandies >= M for candy in candies]
+
+
 if __name__ == "__main__":
     print(kidsWithCandies([2,3,5,1,3], 3))
     print(kidsWithCandies([4,2,1,1,2], 1))
